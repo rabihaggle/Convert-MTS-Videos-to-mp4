@@ -16,6 +16,7 @@ def convert_file(input_file, output_file):
         logging.error(f"Error converting {input_file}: {e}")
     except FileNotFoundError:
         logging.error("ffmpeg not found. Please install ffmpeg.")
+        exit(1)
     except Exception as e:
         logging.error(f"An error occurred: {e}")
 
